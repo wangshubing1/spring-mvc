@@ -10,7 +10,5 @@
 out
 gen
 .gitignore
-.idea/
-.idea/workspace.xml
 src/test/
 target/
