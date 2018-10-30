@@ -1,7 +1,7 @@
 # spring-mvc
 简单的spring-mvc项目工程
 
-[我的博客](https://blog.csdn.net/TXBSW)
+[我的博客](https://blog.csdn.net/TXBSW/article/details/83540834)
 
 ## tomcat配置
 
