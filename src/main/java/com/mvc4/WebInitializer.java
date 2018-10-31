@@ -18,7 +18,7 @@ import javax.servlet.ServletRegistration.Dynamic;
 public class WebInitializer implements WebApplicationInitializer {
 
     @Override
-    public void onStartup(ServletContext servletContext)throws ServletException {
+    public void onStartup(ServletContext servletContext) throws ServletException {
         // 新建一个WebApplicationContext的注册配置类，并和当前的servletContext关联
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(MyMvcConfig.class);
@@ -29,6 +29,7 @@ public class WebInitializer implements WebApplicationInitializer {
                 new DispatcherServlet(context));
         servlet.addMapping("/");
         servlet.setLoadOnStartup(1);
+        servlet.setAsyncSupported(true);
 
         // 日志配置(如果 classpath 里有  logback.xml文件， logback 会试图用它进行自我配置，所以下面两句代码可以不写)
         /*servletContext.setInitParameter("logbackConfigLocation", "classpath:logback.xml");

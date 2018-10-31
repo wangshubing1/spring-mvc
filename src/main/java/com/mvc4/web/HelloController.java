@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HelloController {
     // 通过@RequestMapping配置URL和方法之间的映射
     @RequestMapping("/index")
-    public String hello(){
+    public String hello() {
         // 通过InternalResourceViewResolver的Bean配置，说明我们的放置路径是/WEB-INF/classes/views/index.jsp
         return "index";
     }
